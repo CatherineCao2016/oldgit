@@ -1,6 +1,11 @@
 input_table_name <-  Sys.getenv('input_table_name')
 output_table_name <-  Sys.getenv('output_table_name')
 library('fastDummies')
+library(data.table)
+library(caret)
+library(zoo)
+library(workflows)
+library(glmnet)
 # load data
 library(ibmWatsonStudioLib)
 wslib <- access_project_or_space()
